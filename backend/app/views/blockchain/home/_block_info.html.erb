@@ -1,0 +1,22 @@
+<% text = block[:text]; block = block[:block] %>
+
+<div class="col-sm-6">
+  <% if text %>
+    <b><%= text %></b>
+  <% end %>
+
+  <div class="text-left">
+    <dl>
+      <dt>Inaltime</dt>
+      <dd><%= block.index %></dd>
+      <dt>Numar tranzactii</dt>
+      <dd><%= block.transactions.count %></dd>
+      <dt>Data</dt>
+      <dd><%= block.created_at %></dd>
+      <dt>Hash</dt>
+      <dd><%= block.hash_value %></dd>
+    </dl>
+
+    <%= link_to "Vizualizeaza", blockchain_block_path(block) %>
+  </div>
+</div>

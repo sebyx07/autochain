@@ -1,0 +1,50 @@
+.img-car {
+  width: 100%;
+  border-radius: 10%;
+  /*border-right: 1px solid rgba(76, 76, 76, 0.29);*/
+}
+.list-cars {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  animation-delay: 0.5s;
+}
+
+.car-preview {
+  cursor: pointer;
+  margin-top: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: rgba(203, 203, 203, 0.52);
+  border-radius: 50px;
+  -moz-box-shadow: 0 0 3px rgba(203, 203, 203, 0.52);
+  -webkit-box-shadow: 0 0 3px rgba(203, 203, 203, 0.52);
+  box-shadow: 0 0 3px rgba(203, 203, 203, 0.52);
+}
+
+.car-preview:hover {
+  animation-name: zoom-in;
+}
+.car-preview:after, .car-preview {
+  animation-name: zoom-out;
+}
+
+
+@keyframes zoom-in {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  100% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}

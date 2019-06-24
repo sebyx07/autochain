@@ -1,0 +1,15 @@
+<%= form_with url: path, class: 'col-md-6 card bg-light', method: method do |f| %>
+  <h3 class="mx-auto"><%= title %></h3>
+  
+  <div class="form-group">
+    <%= f.label :brand %>
+    <%= f.text_field :brand, class: 'form-control', required: true, value: @car&.brand %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :model %>
+    <%= f.text_field :model, class: 'form-control', required: true, value: @car&.model %>
+  </div>
+
+  <%= f.submit 'Salveaza', class: 'btn btn-primary btn-block' %>
+<% end %>

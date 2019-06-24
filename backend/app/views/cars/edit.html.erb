@@ -1,0 +1,23 @@
+<div class="row">
+  <%= render "cars/car_form", path: cars_path, title: "Editeaza Anunt", method: :put %>
+</div>
+
+<div class="row">
+  <% (0..3).each do |i| %>
+    <div class="col-sm-4">
+      <% image = current_car.images[i] %>
+      <% if image.present? %>
+        <%= image_tag(image.variant(resize: "400x400")) %>
+        <%= link_to "Sterge", delete_image_car_path(current_car.id, image.id), class: "btn btn-danger btn-block", method: :delete, remote: true %>
+      <% else %>
+        <%= form_with(url: upload_image_car_path(current_car), class: 'card bg-light') do |f| %>
+          <div class="form-group">
+            <%= f.label :image, 'Poza' %>
+            <%= f.file_field :image, class: 'form-control', required: true %>
+          </div>
+          <%= f.submit 'Adauga Poza', class: 'btn btn-primary btn-block' %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,7 @@
+.idea/
+.db_pg/
+*~
+.DS_Store/
+.DS_Store
+DS_Store
+.build/

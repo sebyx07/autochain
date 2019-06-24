@@ -1,0 +1,80 @@
+.cars {
+  margin-top: 56px;
+  min-height: calc( 100vh - 112px);
+  background: rgba(76, 76, 76, 0.29);
+}
+
+img{
+  padding-top: 75px;
+  overflow: no-display;
+  float: right;
+  width: 100%;
+}
+
+.new-car-content  {
+  padding-top: 50px;
+}
+
+.right-side {
+}
+
+.ui-inputtext {
+  width: 100%;
+}
+
+.input {
+  padding-top: 15px;
+}
+
+button {
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .right-side {
+    display: none !important;
+  }
+}
+
+
+:host /deep/ .ui-button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /*background: darkred !important;*/
+  color: #fefefe;
+}
+
+:host /deep/ .ui-button-text-icon-left {
+  width: 50% !important;
+  color: #fefefe !important;
+  /*background: darkred !important;;*/
+}
+
+:host /deep/ .ui-button {
+  background: rgba(102, 102, 102, 0.78) !important;;
+  color: #fefefe !important;
+}
+p-selectbutton {
+  width: 100% !important;
+}
+:host /deep/ .ui-selectbutton {
+  width: 100% !important;
+}
+:host /deep/ .ui-state-active {
+  background: darkred !important;;
+  color: #fefefe !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.add-button {
+  background: darkred;
+  color: #fefefe;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+button {
+  height: 40px;
+}

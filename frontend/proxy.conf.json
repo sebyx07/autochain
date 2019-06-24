@@ -1,0 +1,44 @@
+{
+  "/api": {
+    "target": " https://autoswipe.herokuapp.com",
+    "host": "https://autoswipe.herokuapp.com",
+    "pathRewrite": {
+      "^/api" : "/"
+    },
+    "logLevel": "info",
+    "secure": true,
+    "changeOrigin": true
+  },
+
+  "/api/*": {
+    "target": "https://autoswipe.herokuapp.com",
+    "host": "https://autoswipe.herokuapp.com",
+    "pathRewrite": {
+      "^/api" : "/"
+    },
+    "logLevel": "info",
+    "secure": true,
+    "changeOrigin": true
+  },
+  "/authentication": {
+    "target": " https://autoswipe.herokuapp.com",
+    "host": "https://autoswipe.herokuapp.com",
+    "pathRewrite": {
+      "^/api" : "/"
+    },
+    "logLevel": "info",
+    "secure": true,
+    "changeOrigin": true
+  },
+
+  "/authentication/*": {
+    "target": "https://autoswipe.herokuapp.com",
+    "host": "https://autoswipe.herokuapp.com",
+    "pathRewrite": {
+      "^/api" : "/"
+    },
+    "logLevel": "info",
+    "secure": true,
+    "changeOrigin": true
+  }
+}

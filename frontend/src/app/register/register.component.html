@@ -1,0 +1,50 @@
+<div class="body-container animated fadeIn">
+  <div class="ui-g">
+    <div class="ui-g-12 ui-lg-6 right-side">
+      <div class="login-wrapper">
+        <div class="login-container">
+          <div class="login-stuff">
+            <div class="ui-g ui-fluid">
+              <form [formGroup]="registerForm" (ngSubmit)="register()">
+                <div class="ui-g-12">
+                  <input type="text" autocomplete="off" placeholder="Nume" class="ui-inputtext ui-widget" formControlName="name"/>
+                </div>
+                <div class="ui-g-12">
+                  <input type="text" autocomplete="off" placeholder="Email" class="ui-inputtext ui-widget" formControlName="email" />
+                </div>
+                <div class="ui-g-12">
+                  <input type="password" autocomplete="off" placeholder="Parola" class="ui-inputtext ui-widget" formControlName="password"/>
+                </div>
+                <div class="ui-g-12">
+                  <input type="password" autocomplete="off" placeholder="Confirmare Parola" class="ui-inputtext ui-widget" feedback="false" formControlName="password_confirmation"/>
+                </div>
+                <div class="ui-g-12">
+                  <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only blue-btn">
+                                      <span class="ui-button-text ui-c">
+                                        Inregistrare
+                                      </span>
+                  </button>
+                </div>
+              </form>
+              <div class="ui-g-12">
+                <br/>
+                <br/>
+                <a routerLink="/login">Login Cont Existent</a>
+                <br/>
+                <a routerLink="/">Acasa</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui-g-12 ui- ui-lg-6 left-side">
+      <div class="text width-90">
+        <h1 class="title-big-mdfkr">Inregistrare cont nou</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<p-growl [(value)]="msgs"></p-growl>

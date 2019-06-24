@@ -1,0 +1,80 @@
+.abonamente {
+  margin-top: 56px;
+  width: 100%;
+  background: rgba(76, 76, 76, 0.29);
+  min-height: calc( 100vh - 112px) ;
+  background-image: url("../../assets/background-abonamente.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+
+
+.title {
+  margin-top: 10%;
+}
+
+.side {
+  width: 100%;
+  margin-top: 10vh;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.button {
+  border-radius: 10px;
+  padding: 20px;
+  background: darkred;
+  font-weight: bold;
+  color: #fefefe;
+}
+
+.button-cancel {
+  margin-top: 20px;
+}
+
+h1 {
+  color: #fefefe;
+  text-shadow: 1px 1px black;
+}
+h5 {
+  margin-top: 110px;
+  color: #fefefe;
+}
+
+.pick {
+  width: 100%;
+  padding-bottom: 50px;
+}
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.payment {
+  margin-top: 80px;
+  width: 100%;
+}
+
+h4 {
+  margin-top: 80px;
+  color: #fefefe;
+}
+
+@keyframes ui-progress-spinner-color {
+  100%,
+  0% {
+    stroke: darkred;
+  }
+  40% {
+    stroke: darkred;
+  }
+  66% {
+    stroke: darkred;
+  }
+  80%,
+  90% {
+    stroke: darkred;
+  }
+}

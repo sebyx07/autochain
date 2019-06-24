@@ -1,0 +1,70 @@
+.car-view {
+  padding-top: 106px;
+  min-height: calc( 100vh - 112px);
+  padding-bottom: 106px;
+}
+
+:host /deep/ .ui-galleria-caption {
+  display: none;
+}
+
+p-galleria {
+  width: 100% !important;;
+  height: 450px !important;;
+}
+:host /deep/ .ui-galleria {
+  width: 100% !important;;
+  height: 450px !important;
+
+}
+
+.banner {
+  background: rgba(203, 203, 203, 0.52);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.call-now {
+  background: darkred;
+  color: #fefefe;
+}
+
+.info {
+  padding-top: 150px;
+}
+
+.no-padding {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.title {
+  padding-left: 50px;
+}
+
+.type-name {
+  font-weight: bold;
+}
+
+.full-details {
+  padding-top: 50px;
+}
+.details {
+  padding-top: 20px;
+}
+
+:host /deep/ .ui-widget-content {
+  border: none;
+}
+
+a {
+  color: #fefefe !important;;
+}
+
+:host /deep/ img {
+  width: 100%;
+  object-fit: contain;
+}

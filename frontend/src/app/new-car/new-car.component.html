@@ -1,0 +1,63 @@
+<div class="cars">
+  <div class="container">
+    <div class="row new-car-content">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 animated slideInLeft">
+        <h2 class="col-xs-12 col-md-9 col-lg-9 col-xl-9 text-center ">Adauga anunt nou</h2>
+        <form [formGroup]="newCarForm" (ngSubmit)="addNewCar()" class="login-form">
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <p-dropdown [options]="cars" [(ngModel)]="brand" [style]="{'width':'100%'}" placeholder="Select a Brand" optionLabel="brand" formControlName="brand"></p-dropdown>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <p-dropdown [options]="brand.value.models" [(ngModel)]="model" [style]="{'width':'100%'}" placeholder="Select a Model" optionLabel="name" formControlName="model"></p-dropdown>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <!--<input type="number" autocomplete="off" placeholder="An" class="ui-inputtext ui-widget" formControlName="first_registration"/>-->
+            <p-dropdown [options]="years" [(ngModel)]="selectedYear" [style]="{'width':'100%'}" placeholder="Prima inmatriculare" optionLabel="label" formControlName="first_registration"></p-dropdown>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <input type="number" autocomplete="off" placeholder="Km" class="ui-inputtext ui-widget" formControlName="km"/>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <!--<input type="text" autocomplete="off" placeholder="Culoare" class="ui-inputtext ui-widget" formControlName="color"/>-->
+            <p-dropdown [options]="colors" [(ngModel)]="selectedColor" [style]="{'width':'100%'}" placeholder="Selecteaza culoare" optionLabel="label" formControlName="color"></p-dropdown>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <input type="number" autocomplete="off" placeholder="Pret" class="ui-inputtext ui-widget" formControlName="price"/>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <!--<input type="text" autocomplete="off" placeholder="Transmisie" class="ui-inputtext ui-widget" formControlName="transmission"/>-->
+            <p-selectButton [options]="transmissions" [(ngModel)]="transmission" formControlName="transmission"></p-selectButton>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <input type="number" autocomplete="off" placeholder="Numar usi" class="ui-inputtext ui-widget" formControlName="doors"/>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <input type="text" autocomplete="off" placeholder="Descriere" class="ui-inputtext ui-widget" formControlName="description"/>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <p-selectButton [options]="types" [(ngModel)]="combustibil" formControlName="combustibil"></p-selectButton>
+          </div>
+          <div class="col-xs-12 col-md-9 col-lg-9 col-xl-9 input">
+            <button type="submit"
+                    class="add-button ui-widget ui-state-default ui-corner-all ui-button-text-only blue-btn">
+                                      <span class="ui-button-text ui-c">
+                                        Adauga anunt
+                                      </span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 right-side">
+        <img class="col-12 animated slideInRight" src="../../assets/rs7.png">
+        <p-fileUpload class="col-12" name="image" [url]="'/api/cars/' + id +'/upload_image'" (onUpload)="onUpload($event)"
+                      multiple="false" accept="image/*" maxFileSize="10000000" *ngIf="id">
+          <ng-template pTemplate="content">
+            <ul *ngIf="uploadedFiles.length">
+              <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+            </ul>
+          </ng-template>
+        </p-fileUpload>
+      </div>
+    </div>
+  </div>
+</div>

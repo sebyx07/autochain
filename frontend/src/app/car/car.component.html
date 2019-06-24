@@ -1,0 +1,69 @@
+<div class="car-view animated fadeIn">
+  <div class="container" *ngIf="car">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-lg-10 col-xl-10">
+        <p-galleria class="float-right" [images]="images" panelHeight="400" [showCaption]="false"></p-galleria>
+      </div>
+      <div class="col-xs-12 col-md-2 col-lg-2 col-xl-2 text-center no-padding">
+        <div class="info">
+          <p class="banner">{{car.attributes['price_euro']}} EUR</p>
+          <div class="banner call-now">
+            <a [href]="'tel:'+car.attributes['phone_number']">Suna acum</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 full-details">
+        <h1 class="title">{{car.attributes.brand}} {{car.attributes.model}}</h1>
+        <div class="col-12">
+          <h5 class="d-inline">{{car.attributes['first_registration'].split('-')[0]}}</h5>
+          <h5 class="d-inline"> • </h5>
+          <h5 class="d-inline">{{car.attributes["number_of_kilometers"]}} KM</h5>
+          <h5 class="d-inline"> • </h5>
+          <h5 class="d-inline">{{car.attributes["transmission_type"]}}</h5>
+          <h5 class="d-inline"> • </h5>
+          <h5 class="d-inline">{{car.attributes["fuel_type"]}}</h5>
+          <!--<h5 class="d-inline"> • </h5>-->
+          <!--<h5 class="d-inline">{{car.attributes.cmc}}</h5>-->
+        </div>
+      </div>
+      <div class="details col-10 row">
+        <div class="col-6">
+          <p class="type-name d-inline">Brand: </p>
+          <p class="d-inline"> {{car.attributes.brand}}</p>
+        </div>
+        <div class="col-6">
+          <p class="type-name d-inline">Model: </p>
+          <p class="d-inline"> {{car.attributes.model}}</p>
+        </div>
+        <div class="col-6">
+          <p class="type-name d-inline">Culoare: </p>
+          <p class="d-inline"> {{car.attributes.color}}</p>
+        </div>
+        <div class="col-6">
+          <p class="type-name d-inline">Prima inregistrare: </p>
+          <p class="d-inline"> {{car.attributes['first_registration'].split('-')[0]}}</p>
+        </div>
+        <div class="col-6">
+          <p class="type-name d-inline">Numar de kilometrii: </p>
+          <p class="d-inline"> {{car.attributes['number_of_kilometers']}} KM</p>
+        </div>
+        <div class="col-6">
+          <p class="type-name d-inline">Transmisie: </p>
+          <p class="d-inline"> {{car.attributes['transmission_type']}}</p>
+        </div>
+        <div class="col-6">
+          <p class="type-name d-inline">Numar usi: </p>
+          <p class="d-inline"> {{car.attributes['number_of_doors']}}</p>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class="col-12">
+          <p>
+            {{car.attributes.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="card">
+  <article class="card-group-item">
+    <header class="card-header">
+      <h6 class="title">Informatii block <b><%= @block.id %></b> </h6>
+    </header>
+
+    <div class="filter-content">
+      <div class="card-body row">
+        <dl>
+          <dt>Hash</dt>
+          <dd><%= @block.hash_value %></dd>
+          <dt>Tranzactii</dt>
+          <dd>
+            Numar: <%= @block.transactions.size %>
+            <hr>
+            <br>
+            <ul class="list-group">
+              <% @block.transactions.each do |t| %>
+                <li class="list-group-item">
+                  <dl>
+                    <dt>Name</dt>
+                    <dd><%= t.name %></dd>
+                    <dt>Hash</dt>
+                    <dd><%= t.hash_value %></dd>
+                    <dt>Data</dt>
+                    <dd><%= t.data.to_json %></dd>
+                  </dl>
+
+                  <%= link_to "Vizualizeaza", blockchain_transaction_path(t) %>
+                </li>
+              <% end %>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </article>
+</div>

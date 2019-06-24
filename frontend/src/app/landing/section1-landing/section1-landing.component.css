@@ -1,0 +1,7 @@
+.fullPage {
+  height: 100vh ;
+  background-image: url("../../../assets/landing-car-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

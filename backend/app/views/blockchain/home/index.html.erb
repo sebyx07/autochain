@@ -1,0 +1,12 @@
+<div class="card">
+  <article class="card-group-item">
+    <header class="card-header">
+      <h6 class="title">Inaltimea curenta a chainului: <%= @latest_blocks.first[:block].index %> </h6>
+    </header>
+    <div class="filter-content text-center">
+      <div class="card-body row">
+        <%= render partial: "blockchain/home/block_info", collection: @latest_blocks.reverse, as: :block %>
+      </div>
+    </div>
+  </article>
+</div>

@@ -1,0 +1,14 @@
+@import "font-awesome";
+@import "bootstrap/scss/bootstrap";
+@import "toastr/build/toastr";
+@import "application/*";
+
+dl{
+  width:100%;
+}
+
+
+.list-group{
+  height: 30em;
+  overflow-y: scroll;
+}

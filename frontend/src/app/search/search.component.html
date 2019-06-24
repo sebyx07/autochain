@@ -1,0 +1,36 @@
+<div class="search animated fadeIn ">
+  <div class="container">
+    <div class=" row sides">
+      <div class="hidden-xs col-md-6 col-lg-6 col-xl-6 text-center ">
+        <img src="../../assets/a7-invers.png"  class="car" width="100%"/>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="pre-panel">
+          <div class="panel row text-center">
+            <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 input">
+              <p-dropdown [options]="cars" [(ngModel)]="brand" [style]="{'width':'100%'}" placeholder="Select a Brand" optionLabel="brand" [showClear]="true"></p-dropdown>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 input">
+              <p-dropdown [options]="brand != null ? brand.models : []" [(ngModel)]="model" [style]="{'width':'100%'}" placeholder="Select a Model" optionLabel="name" [showClear]="true"></p-dropdown>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 input">
+              <h6>Year: {{(yearValues[0]/5+1998) + ' - ' + (yearValues[1]/5+1998)}}</h6>
+              <p-slider [(ngModel)]="yearValues" [style]="{'width':'100%'}" [range]="true"></p-slider>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 input">
+              <h6>Price: {{(priceValues[0]*600+1000) + '€ - ' + (priceValues[1]*600+1000)+'€'}}</h6>
+              <p-slider [(ngModel)]="priceValues" [style]="{'width':'100%'}" [range]="true"></p-slider>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 input select text-center">
+              <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 input">
+              <button class="button-search" (click)="search()">Cauta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-list-cars [inputCars]="carzz"></app-list-cars>

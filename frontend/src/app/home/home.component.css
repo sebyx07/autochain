@@ -1,0 +1,4 @@
+.min-height {
+  margin-top: 56px;
+  min-height: calc( 100vh - 112px);
+}

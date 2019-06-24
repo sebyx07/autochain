@@ -1,0 +1,36 @@
+<div class="list-cars animated slideInUp">
+  <div class="container">
+    <div class="row">
+      <div class="col-12" *ngIf="cars != undefined && cars.length > 0">
+        <div class="car-preview" *ngFor="let car of cars" >
+          <div (click)="viewCar(car.id)" class="row animated slideInUp">
+            <div class="col-xs-12 col-md-4 col-lg-4 col-xl-4">
+              <img [src]="car.images[0]" class="img-car"/>
+            </div>
+            <div class="col-xs-12 col-md-8 col-lg-8 col-xl-8">
+              <div class="col-12 d-inline-block">
+                <h4 class="d-inline">{{car.brand}} {{car.model}}</h4>
+                <h5 class="d-inline float-right">EUR</h5>
+                <h4 class="d-inline float-right">{{car['price-euro'] || car.priceEuro }}</h4>
+              </div>
+              <div class="col-12">
+                <p class="d-inline">{{car.firstRegistration || car.attributes['first-registration']}}</p>
+                <p class="d-inline"> • </p>
+                <p class="d-inline">{{car.numberOfKilometers || car.attributes['number-of-kilometers']}}</p>
+                <p class="d-inline"> • </p>
+                <p class="d-inline">{{car.transmissionType || car.attributes['transmission-type']}}</p>
+                <p class="d-inline"> • </p>
+                <p class="d-inline">{{car.fuelType || car.attributes['fuel-type']}}</p>
+              </div>
+              <div class="col-12">
+                <!--<img src="../../assets/premium.png" class="float-right" />-->
+                <img src="../../assets/premium.png" width="100px" *ngIf="car.isPremium" class="d-inline float-right"/>
+                <p class="d-inline">{{car.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

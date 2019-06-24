@@ -1,0 +1,25 @@
+{
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^6.0.5",
+    "@angular/compiler": "^6.0.5",
+    "@angular/core": "^6.0.5",
+    "@angular/platform-browser": "^6.0.5",
+    "@angular/platform-browser-dynamic": "^6.0.5",
+    "@rails/webpacker": "3.5",
+    "bootstrap": "^4.1.1",
+    "core-js": "^2.5.7",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "rxjs": "^6.2.1",
+    "stimulus": "^1.0.1",
+    "toastr": "^2.1.4",
+    "ts-loader": "3.5.0",
+    "typescript": "^2.9.2",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
+}

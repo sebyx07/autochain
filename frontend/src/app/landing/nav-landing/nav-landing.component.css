@@ -1,0 +1,63 @@
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed; /* <-- Look here */
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+nav {
+  background: transparent;
+}
+
+nav.navbar-scrolled {
+  color: #422d3f !important;
+  background: linear-gradient(#ffffff, #f4edee);
+}
+
+nav.navbar-scrolled a {
+  color: #422d3f;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #cbbde2;
+}
+a {
+  color: #fefefe
+}
+
+.dropdown-menu {
+  background: transparent;
+  /*background: #543d7bde;*/
+  border-color: #ffffff5c;
+}
+hr {
+  color: #fefefe;
+  background: #fefefe;
+}
+
+.btn-outline-success {
+  color:#fefefe;
+  border-color: #fefefe;
+}
+
+.blue{
+  color: #53caf0;
+}
+.navbar-toggler {
+  color: #ffffff;
+}
+.navbar-scrolled {
+  color: #422d3f !important;
+}
+
+/*@media(min-width: 768px){*/
+  /*.navbar > .container { max-width: 100%; padding: 0; }*/
+/*}*/
+.navbar-collapse {
+  /*background: #21222d;*/
+}
+
+.dropdown-divider {
+  background: #21222d;
+}

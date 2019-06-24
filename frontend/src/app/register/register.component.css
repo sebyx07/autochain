@@ -1,0 +1,42 @@
+.body-container {
+  min-height: 100vh;
+}
+
+.title-big-mdfkr {
+  font-size: 7vh;
+}
+
+.sub-title {
+  font-size: 20pt;
+}
+
+.left-side {
+  color: #fefefe;
+  background-image: url('../../assets/login.jpg');
+  background-position: right;
+  background-size: cover;
+  height: 100vh;
+}
+.right-side {
+  min-height: 100vh;
+  background: rgba(203, 203, 203, 0.52);
+}
+
+.text {
+  position: relative;
+  top:30%;
+  left: 10%;
+}
+.title {
+  padding-left: 5%;
+}
+.login-stuff {
+  position: relative;
+  top: 20vh;
+  left: 5%;
+  width: 90%;
+}
+
+.width-90{
+width: 90%;
+ }

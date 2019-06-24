@@ -1,0 +1,23 @@
+<div class="card">
+  <article class="card-group-item">
+    <header class="card-header">
+      <h6 class="title">Tranzactie <%= @transaction.id %> </h6>
+    </header>
+    <div class="filter-content">
+      <div class="card-body row">
+        <dl>
+          <dt>Data creatie</dt>
+          <dd><%= @transaction.created_at %></dd>
+          <dt>Block</dt>
+          <dd><%= link_to "Vizualizeaza", blockchain_block_path(@transaction.block.id) %></dd>
+          <dt>Bloc inaltime</dt>
+          <dd><%= @transaction.block.index %></dd>
+          <dt>Data</dt>
+          <dd><%= @transaction.data.to_json %></dd>
+          <dt>Confirmari</dt>
+          <dd><%= @transaction.confirms %></dd>
+        </dl>
+      </div>
+    </div>
+  </article>
+</div>

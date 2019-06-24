@@ -1,0 +1,22 @@
+<div class="abonamente animated fadeIn">
+  <div class="container">
+    <div class="row car-background">
+      <div class="title text-center col-12">
+        <h1>{{ headerText }}</h1>
+      </div>
+      <div *ngIf="chooseSubscription" class="pick row text-center">
+        <div class="left-side side col-xs-12- col-md-6 col-lg-6 col-xl-6 text-center">
+            <button class="button" (click)="onSubscriptionSelected(1)">Abonament Super</button>
+        </div>
+        <div class="right-side side col-xs-12- col-md-6 col-lg-6 col-xl-6 text-center">
+          <button class="button" (click)="onSubscriptionSelected(2)">Abonament Plus</button>
+        </div>
+      </div>
+      <div *ngIf="!chooseSubscription" class="payment text-center">
+        <p-progressSpinner></p-progressSpinner>
+        <h4>Conectare la serverele PayU...</h4>
+        <button class="button button-cancel" (click)="onSubscriptionCanceled()">Anulare</button>
+      </div>
+    </div>
+  </div>
+</div>
